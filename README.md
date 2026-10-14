@@ -9,11 +9,26 @@ Multimodal Retrieval-Augmented Generation (RAG) implementation for querying PDF 
 - Hugging Face (embeddings)
 - Groq (LLM inference)
 
-
-## Pipeline
+## Architecture
 
 ```text
-PDF → Extraction → Processing → Embeddings → Pinecone
-                                                |
-User Query → Retriever → Relevant Context → LLM → Response
+PDF Documents
+      |
+      v
+Text, Tables & Image Extraction
+      |
+      v
+Content Processing & Summarization
+      |
+      v
+Embedding Generation
+      |
+      v
+Pinecone Vector Database
+      |
+      v
+Semantic Search & Retrieval
+      |
+      v
+LLM Response Generation
 ```
